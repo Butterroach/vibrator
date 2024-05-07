@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>vibrator</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                IGNORE THIS UNTIL THIS TEXT IS GONE (i fucking hate the w3c
+                goddamnit)
+            </h1>
+            <p>
+                (if you're a safari user FUCK YOU you are not gonna be able to
+                see one extremely insignificant effect on one of the elements)
+            </p>
+            <textarea id="bigmac"></textarea>
+            <button id="cheeseburger" onclick="hamburger()"></button>
+        </div>
+        <script>
+            function hamburger() {
+                eval(document.getElementById("bigmac").value);
+            }
+        </script>
+        <style>
+            h1,
+            p,
+            button {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
+            h1 {
+                color: red;
+            }
+            textarea {
+                font-family: "Courier New", Courier, monospace;
+            }
+            body,
+            div {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background-color: #1e1e1e;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                overflow: hidden;
+            }
+            #bigmac {
+                background-color: transparent;
+                backdrop-filter: brightness(40%);
+                color: white;
+                width: 50vw;
+                height: 50vh;
+            }
+            #cheeseburger {
+                transition: 0.2s;
+                background-color: #3e3e3e;
+                border-style: solid;
+                width: 12.5vw;
+                height: 12.5vh;
+            }
+            #cheeseburger:hover {
+                transition: 0.2s;
+                background-color: #5e5e5e;
+            }
+            #cheeseburger:active {
+                transition: 0.2s;
+                background-color: #090909;
+            }
+            * {
+                transition: 0.2s;
+            }
+        </style>
+    </body>
+</html>
