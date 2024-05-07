@@ -6,15 +6,35 @@
         <title>vibrator</title>
     </head>
     <body>
-        <p id="status">connect a gamepad then press any button on it</p>
+        <div>
+            <label
+                >Mobile mode (please check this if you're on mobile, will lower
+                intensity): <input type="checkbox" id="mobile"
+            /></label>
+            <label
+                >Intensity:
+                <input
+                    id="intensity"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="100"
+            /></label>
+            <p id="status">connect a gamepad then press any button on it</p>
+        </div>
         <script src="index.js"></script>
         <style>
             h1,
-            p {
+            p,
+            label {
                 font-family: Arial, Helvetica, sans-serif;
                 color: white;
             }
-            body {
+            * {
+                transition: 0.2s;
+            }
+            body,
+            div {
                 width: 100vw;
                 height: 100vh;
                 display: flex;
@@ -24,9 +44,6 @@
                 justify-content: center;
                 gap: 5px;
                 overflow: hidden;
-            }
-            *:not(body) {
-                transition: 0.2s;
             }
         </style>
     </body>
