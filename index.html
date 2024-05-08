@@ -6,7 +6,7 @@
         <title>vibrator</title>
     </head>
     <body>
-        <div>
+        <div id="app">
             <label
                 >Mobile mode (please check this if you're on mobile, will lower
                 intensity): <input type="checkbox" id="mobile"
@@ -22,28 +22,65 @@
             /></label>
             <p id="status">connect a gamepad then press any button on it</p>
         </div>
+        <div id="why">
+            <h1>Why</h1>
+            <ul>
+                <li>fun (obviously)</li>
+                <li>
+                    you could use it as an autoclicker (which is worse than my
+                    speed at butterfly meaning it's probably not a great one)
+                </li>
+                <li>
+                    heartbeat simulator (drag intensity to 0 then press the
+                    right arrow key, enable mobile mode for a calmer heartbeat)
+                </li>
+                <li>LITTLE TABLE DEMON</li>
+                <li>annoying sound creator</li>
+                <li>could be an alarm</li>
+                <li>massager?</li>
+                <li>idk just fuck with it</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Note</h1>
+            <p>
+                i only tested this on a dualshock 4 PLEASE OPEN A GODDAMN ISSUE
+                IF IT DOESN'T WORK ON XBOX CONTROLLERS
+            </p>
+        </div>
         <script src="index.js"></script>
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap");
             h1,
             p,
-            label {
-                font-family: Arial, Helvetica, sans-serif;
+            label,
+            li::marker,
+            li {
+                font-family: "Noto Sans", Arial, Helvetica, sans-serif;
                 color: white;
+            }
+            h1 {
+                font-family: "Noto Sans Display", "Noto Sans", Arial, Helvetica,
+                    sans-serif;
             }
             * {
                 transition: 0.2s;
             }
-            body,
+            body {
+                background-color: #1e1e1e;
+            }
             div {
-                width: 100vw;
-                height: 100vh;
+                width: 98vw;
                 display: flex;
                 flex-direction: column;
                 background-color: #1e1e1e;
                 align-items: center;
-                justify-content: center;
                 gap: 5px;
-                overflow: hidden;
+            }
+            div#app {
+                justify-content: center;
+                height: 100vh;
             }
         </style>
     </body>
